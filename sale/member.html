@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/sale/static/lib/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/sale/static/css/my.css" rel="text/css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+<!--------------------------------------------=메뉴--------------------------------------------------------------------->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href="#">판매관리</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">매입 <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">매출</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">기간조회</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      통계
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">베스트 제품</a>
+                      <a class="dropdown-item" href="#">원별제품별현황</a>
+                      <a class="dropdown-item" href="#">종류별분포도</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      기초정보
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">구분</a>
+                      <a class="dropdown-item" href="#">제품</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">사용자</a>
+                    </div>
+                  </li>
+                </ul>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button">로그인</button>
+              </div>
+            </nav>
+
+<!--===============================================제목줄================================================================-->
+            <div class="alert alert-primary" role="alert">
+            사용자
+            </div>
+<!--================================================search=============================================================-->
+            <form method="post" action="">
+                <div class="row">
+                    <div class="col-8" align="left">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">이름</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="찾을 이름은?" aria-label="Username" aria-describedby="basic-addon1">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-secondary">검색</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4" align="right"><button type="button" class="btn btn-dark">추가</button></div>
+                </div>
+            </form>
+<!--===============================================사용자 목록==========================================================-->
+            <table class="table">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">번호</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">아이디</th>
+                  <th scope="col">암호</th>
+                  <th scope="col">전화</th>
+                  <th scope="col">등급</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>Mark</td>
+                  <td>Mark</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Mar2k</td>
+                  <td>Otto2</td>
+                  <td>@mdo2</td>
+                  <td>Mark2</td>
+                  <td>Mark2</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!--===========================paging===========================================--->
+            <div>
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+            </div>
+
+            <!--------------footer---------------->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+         <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+         <script src="/sale/static/lib/js/bootstrap.min.js"></script>
+    </body>
+</html>

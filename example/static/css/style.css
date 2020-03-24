@@ -1,0 +1,14 @@
+body{
+  background-color: white;
+}
+
+#box{
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  margin-left: 400px;
+  margin-top: 50px;
+
+}

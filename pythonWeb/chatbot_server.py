@@ -1,7 +1,7 @@
 import requests
 import json
-
-from flask import Flask, request, jsonify
+#http://localhost:5000/?content=%EA%B0%80%EC%A1%B1%EC%9D%80%20%EB%AA%87%20%EB%AA%85%EC%9D%B4%EC%95%BC?&userid=a
+from flask import Flask, request, jsonify, render_template
 
 
 def get_answer(text, user_key):
@@ -41,15 +41,18 @@ app = Flask(__name__)
 
 app.config['JSON_AS_ASCII'] = False
 
-
-@app.route('/', methods=['POST', 'GET'])
+'''
+@app.route('/', methods=['POST','GET'])
 def webhook():
-    content = request.args.get('content')
+     content = request.form('content')
+     userid = request.form('userid')
+     return get_answer(content, userid)
+'''
 
-    userid = request.args.get('userid')
-
-    return get_answer(content, userid)
+@app.route('/', methods=['POST','GET'])
+def index():
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0',debug=True)
